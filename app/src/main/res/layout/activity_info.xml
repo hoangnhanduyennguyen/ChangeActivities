@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    /*Have to have 3 constrains*/
+    <TextView
+        android:id="@+id/textViewStInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Information"
+        style="@style/StInfoStyle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name :"
+        style="@style/TextVStyle"
+        app:layout_constraintTop_toBottomOf="@id/textViewStInfo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextName"
+        style="@style/InputTextStyle"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/textViewName"
+        app:layout_constraintLeft_toRightOf="@id/textViewName"
+        app:layout_constraintTop_toTopOf="@id/textViewName"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age :"
+        style="@style/TextVStyle"
+        app:layout_constraintTop_toBottomOf="@id/textViewName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@id/textViewName"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextAge"
+        android:contentDescription="@null"
+        style="@style/InputTextStyle"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text=""
+        app:layout_constraintTop_toTopOf="@id/textViewAge"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewAge"
+        app:layout_constraintStart_toStartOf="@+id/editTextName"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDisplay"
+        android:text="Display"
+        android:textSize="20dp"
+        style="@style/ButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewName"
+        android:layout_marginBottom="50dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReturn"
+        android:text="Return"
+        android:textSize="20dp"
+        style="@style/ButtonStyle"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDisplay"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintTop_toTopOf="@id/btnDisplay"
+        />
+    /* start to start of will align 2 things
+    ems = 10: the edit view can contain 10 letter M
+    top to top of and bottom to bottom of will align center vertically
+    should align view to view*/
+
+</androidx.constraintlayout.widget.ConstraintLayout>
